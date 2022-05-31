@@ -74,11 +74,11 @@ const FilterPage: NextPage<Props> = ({
       ? push(`/${countryCode}/${lang}`)
       : push(`/${countryCode}/${lang}?searchBy=${searchEngine}`)
   }
-  const languageCode = parseLanguageCode(lang, 'toLowerCase', true)
+  const language_code = parseLanguageCode(lang, 'toLowerCase', true)
   return !endpoint ? null : (
     <CommerceLayer accessToken={token} endpoint={endpoint}>
       <OrderStorage persistKey={`order-${code}`}>
-        <OrderContainer attributes={{ languageCode }}>
+        <OrderContainer attributes={{ language_code }}>
           <Layout
             title="Commerce Layer Starter"
             buildLanguages={buildLanguages}
