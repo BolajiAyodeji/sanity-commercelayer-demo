@@ -85,7 +85,7 @@ const ProductPage: FunctionComponent<Props> = ({
     e.preventDefault()
     router.back()
   }
-  const languageCode = parseLanguageCode(lang, 'toLowerCase', true)
+  const language_code = parseLanguageCode(lang, 'toLowerCase', true)
   return !product ? null : (
     <CommerceLayer accessToken={token} endpoint={endpoint}>
       <OrderStorage persistKey={`order-${countryCode}`}>
