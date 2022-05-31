@@ -89,7 +89,7 @@ const ProductPage: FunctionComponent<Props> = ({
   return !product ? null : (
     <CommerceLayer accessToken={token} endpoint={endpoint}>
       <OrderStorage persistKey={`order-${countryCode}`}>
-        <OrderContainer attributes={{ languageCode }}>
+        <OrderContainer attributes={{ language_code }}>
           <Layout
             cms={cms}
             title={product.name}
